@@ -44,6 +44,13 @@ body{
   flex: 1 1 auto;
 }
 
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+
 .p-10{
   padding: 10px;
 }
@@ -56,6 +63,61 @@ body{
 .m-20{
   margin: 20px;
 }
+.mb-20{
+  margin-bottom: 20px;
+}
+.flex-50{
+  flex: 1 1 50%;
+}
+.pr-10{
+  padding-right: 10px;
+}
+.pl-10{
+  padding-left: 10px;
+}
+
+//=========== Theme ===============
+
+.list-primary{
+  li{
+    padding: 10px 15px;
+    border: 1px solid $lightgrey;
+    border-top: 0;
+    &:hover{
+      background-color: $primary;
+      color: white;
+      cursor: pointer;
+    }
+    transition: all 0.3s;
+  }
+  li:first-child{
+    border-top: 1px solid $lightgrey;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  li:last-child{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+}
+
+.btn{
+  padding: 10px 15px;
+  background-color: white;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  &-primary{
+    background-color: $primary;
+    color: white;
+    &:hover{
+      background-color: $secondary;
+    }
+    transition: background-color 0.3s;
+  }
+}
 
 // ========== Debug ===========
 
@@ -65,4 +127,5 @@ border: 1px solid red;
 .d2{
   border: 1px solid green;
 }
+
 
