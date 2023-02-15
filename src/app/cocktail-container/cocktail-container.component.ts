@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Cocktail} from "../interfaces/cocktail.interface";
 
+
 @Component({
-  selector: 'app-cocktail-list',
-  templateUrl: './cocktail-list.component.html',
-  styleUrls: ['./cocktail-list.component.scss']
+  selector: 'app-cocktail-container',
+  templateUrl: './cocktail-container.component.html',
+  styleUrls: ['./cocktail-container.component.scss']
 })
-export class CocktailListComponent {
-  cocktails: Cocktail[] = [
+export class CocktailContainerComponent implements OnInit{
+  public cocktails: Cocktail[] = [
     {
       name: "Mojito",
       image: "https://assets.afcdn.com/recipe/20180705/80345_w1024h1024c1cx4150cy1741.webp",
@@ -24,4 +25,11 @@ export class CocktailListComponent {
       description: "Le ti-punch ou ti-ponch (signifiant « petit punch » en créole antillais, guyanais, réunionnais ou haïtien) est un cocktail à base de rhum, de citron vert, et de sirop de batterie, de sucre roux de canne, ou sirop de canne à sucre1. Variante des punch, mojito, daïquiri, cuba libre, caïpirinha, et caïpiroska, il est un cocktail-apéritif traditionnel festif, et une institution sociale emblématique des cuisines antillaise2, guyanaise, réunionnaise, et haïtienne.",
     }
   ]
+  public selectedCocktail!: Cocktail;
+  public ngOnInit() :void{
+    this.selectedCocktail = this.cocktails[0]
+  };
+  public selectCocktail(index: number) :void{
+    this.selectedCocktail = this.cocktails[index];
+  }
 }
