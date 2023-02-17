@@ -12,7 +12,9 @@ ul{
     display: inline-block;
     border-radius: 3px;
     padding: 10px 20px;
+    margin-right: 10px;
     &:hover{
+      cursor: pointer;
       background-color: $secondary;
     }
     transition: background-color 0.4s;

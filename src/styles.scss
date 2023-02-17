@@ -77,18 +77,22 @@ body{
 }
 
 //=========== Theme ===============
+.list-primary-action{
+  li{
+    &:hover{
+      background-color: $primary;
+      color: white;
+      cursor: pointer;
+    }
+    transition: background-color 0.3s;
+  }
+}
 
 .list-primary{
   li{
     padding: 10px 15px;
     border: 1px solid $lightgrey;
     border-top: 0;
-    &:hover{
-      background-color: $primary;
-      color: white;
-      cursor: pointer;
-    }
-    transition: all 0.3s;
   }
   li:first-child{
     border-top: 1px solid $lightgrey;
@@ -117,6 +121,19 @@ body{
     }
     transition: background-color 0.3s;
   }
+}
+
+.badge{
+  background-color: $secondary;
+  border-radius: 3px;
+  padding: 2px 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.active{
+  background-color: $secondary;
 }
 
 // ========== Debug ===========
