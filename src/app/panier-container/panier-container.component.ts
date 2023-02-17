@@ -9,7 +9,7 @@ import {Subscription} from "rxjs";
   styleUrls: ['./panier-container.component.scss']
 })
 export class PanierContainerComponent implements OnInit, OnDestroy{
-  public ingredients!: Ingredient[];
+  public ingredients: Ingredient[] = [];
   public subscription!: Subscription;
   constructor(private panierService: PanierService) {
   }

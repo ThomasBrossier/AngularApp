@@ -14,6 +14,7 @@ import { IngredientListComponent } from './panier-container/ingredient-list/ingr
 
 // Routes
 import {APP_ROUTES} from "./app.routes";
+import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {APP_ROUTES} from "./app.routes";
     CocktailDetailsComponent,
     CocktailContainerComponent,
     PanierContainerComponent,
-    IngredientListComponent
+    IngredientListComponent,
+    CocktailFormComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(APP_ROUTES)

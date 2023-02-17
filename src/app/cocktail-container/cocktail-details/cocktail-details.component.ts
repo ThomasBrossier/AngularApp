@@ -10,15 +10,15 @@ import {CocktailService} from "../../shared/services/cocktail.service";
   styleUrls: ['./cocktail-details.component.scss']
 })
 export class CocktailDetailsComponent implements OnInit {
-  public cocktail!: Cocktail;
+  public cocktail: Cocktail;
   constructor(private panierService: PanierService,private cocktailService: CocktailService,  private activatedRoute: ActivatedRoute) {
+    this.cocktail = this.cocktailService.getCocktail(+this.activatedRoute.snapshot.paramMap.get('index')!);
   }
 
   ngOnInit() :void {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap)=>{
 
-      // @ts-ignore
-      this.cocktail = this.cocktailService.getCocktail(+paramMap.get('index'))
+      this.cocktail = this.cocktailService.getCocktail(+paramMap.get('index')!)
     })
   }
 

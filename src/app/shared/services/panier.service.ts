@@ -14,7 +14,7 @@ export class PanierService {
 
     const currentValue = this.ingredients$.value;
     if(currentValue){
-      const obj = [ ...currentValue, ...ingredients ].reduce((acc: any, value)=>{
+      const obj = [ ...currentValue, ...ingredients ].reduce((acc: { [x: string]: number}, value)=>{
           if (acc[value.name]){
              acc[value.name] += value.quantity;
           }else{
