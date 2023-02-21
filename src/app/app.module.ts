@@ -1,6 +1,7 @@
 // Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
 // Composants
@@ -10,12 +11,11 @@ import { CocktailListComponent } from './cocktail-container/cocktail-list/cockta
 import { CocktailDetailsComponent } from './cocktail-container/cocktail-details/cocktail-details.component';
 import { CocktailContainerComponent } from './cocktail-container/cocktail-container.component';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
+import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
 import { IngredientListComponent } from './panier-container/ingredient-list/ingredient-list.component';
 
 // Routes
 import {APP_ROUTES} from "./app.routes";
-import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
-import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     CocktailFormComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(APP_ROUTES), ReactiveFormsModule
+    BrowserModule,FormsModule, RouterModule.forRoot(APP_ROUTES), ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
