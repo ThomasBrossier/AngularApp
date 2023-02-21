@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {PanierService} from "../shared/services/panier.service";
-import {Ingredient} from "../shared/interfaces/ingredients.interface";
+import {PanierService} from "../../../shared/services/panier.service";
+import {Ingredient} from "../../../shared/interfaces/ingredients.interface";
 import {Subscription} from "rxjs";
 
 @Component({

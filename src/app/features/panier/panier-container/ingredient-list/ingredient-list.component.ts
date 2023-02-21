@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Ingredient} from "../../shared/interfaces/ingredients.interface";
+import {Ingredient} from "../../../../shared/interfaces/ingredients.interface";
 
 @Component({
   selector: 'app-ingredient-list',

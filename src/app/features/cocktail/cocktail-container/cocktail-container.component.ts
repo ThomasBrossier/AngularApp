@@ -1,7 +1,7 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Cocktail} from "../shared/interfaces/cocktail.interface";
-import {CocktailService} from "../shared/services/cocktail.service";
-import {Observable, Subscription} from "rxjs";
+import {Component} from '@angular/core';
+import {Observable} from "rxjs";
+import {Cocktail} from "../../../shared/interfaces/cocktail.interface";
+import {CocktailService} from "../../../shared/services/cocktail.service";
 
 
 @Component({
