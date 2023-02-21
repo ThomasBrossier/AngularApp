@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
+// Pipes
+
 // Composants
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +18,7 @@ import { IngredientListComponent } from './panier-container/ingredient-list/ingr
 
 // Routes
 import {APP_ROUTES} from "./app.routes";
+import { FilterPipe } from './shared/pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import {APP_ROUTES} from "./app.routes";
     CocktailContainerComponent,
     PanierContainerComponent,
     IngredientListComponent,
-    CocktailFormComponent
+    CocktailFormComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,FormsModule, RouterModule.forRoot(APP_ROUTES), ReactiveFormsModule
