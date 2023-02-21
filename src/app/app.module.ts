@@ -1,10 +1,12 @@
 // Modules
+import {HttpClientModule} from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
 // Pipes
+import { FilterPipe } from './shared/pipe/filter.pipe';
 
 // Composants
 import { AppComponent } from './app.component';
@@ -18,7 +20,6 @@ import { IngredientListComponent } from './panier-container/ingredient-list/ingr
 
 // Routes
 import {APP_ROUTES} from "./app.routes";
-import { FilterPipe } from './shared/pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { FilterPipe } from './shared/pipe/filter.pipe';
     FilterPipe
   ],
   imports: [
-    BrowserModule,FormsModule, RouterModule.forRoot(APP_ROUTES), ReactiveFormsModule
+    BrowserModule,HttpClientModule, FormsModule, RouterModule.forRoot(APP_ROUTES), ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
