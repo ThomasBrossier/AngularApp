@@ -4,7 +4,7 @@ import {CocktailFormComponent} from "./cocktail-container/cocktail-form/cocktail
 import {CocktailDetailsComponent} from "./cocktail-container/cocktail-details/cocktail-details.component";
 
 export const COCKTAIL_ROUTES: Routes = [
-  { path: 'cocktails', component: CocktailContainerComponent, children: [
+  { path: '', component: CocktailContainerComponent, children: [
       { path : 'new', component : CocktailFormComponent},
       { path : ':index/edit', component : CocktailFormComponent},
       { path : ':index', component: CocktailDetailsComponent },

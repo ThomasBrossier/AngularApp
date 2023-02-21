@@ -2,8 +2,6 @@
 import {HttpClientModule} from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {CocktailModule} from "./features/cocktail/cocktail.module";
-import {PanierModule} from "./features/panier/panier.module";
 import {RouterModule} from "@angular/router";
 
 // Composants
@@ -22,8 +20,6 @@ import {APP_ROUTES} from "./app.routes";
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
-    CocktailModule,
-    PanierModule
   ],
   providers: [],
   bootstrap: [AppComponent]
